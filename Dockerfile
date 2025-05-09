@@ -1,4 +1,4 @@
-FROM alpine:3.13.5 as megacmd-compiler
+FROM alpine:3.21.3 as megacmd-compiler
 
 RUN apk add --repository https://dl-cdn.alpinelinux.org/alpine/edge/testing --update \
       libtool \
@@ -35,7 +35,7 @@ RUN apk add --repository https://dl-cdn.alpinelinux.org/alpine/edge/testing --up
     make install
 
 
-FROM alpine:3.13.5
+FROM alpine:3.21.3
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 ARG JOBBER_VERSION=1.4.4
