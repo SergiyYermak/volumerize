@@ -42,6 +42,8 @@ RUN apk upgrade --update && \
       python3-dev \
       duplicity \
       py3-pip && \
+      python -m venv ~/pythonenv && \
+      . ~/pythonenv/bin/activate && \
     pip install --upgrade pip && \
     pip install \
       setuptools \
